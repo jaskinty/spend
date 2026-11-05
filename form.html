@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expense Form</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <button onclick="history.back()">Back</button>
+  <h2 id="form-title">Expense</h2>
+  <form id="exp-form">
+    <label>Description<br><input name="description" required></label>
+    <label>Category<br><select name="categoryId" id="cat-select"></select></label>
+    <label>Cost<br><input name="cost" type="number" step="0.01" required></label>
+    <label>Duration (days)<br><input name="duration" type="number" step="0.01" required></label>
+    <button type="submit">Save</button>
+    <button type="button" id="delete-btn" style="display:none">Delete</button>
+    <a href="cats.html"><button type="button">Manage Categories</button></a>
+  </form>
+</div>
+<script src="common.js"></script>
+<script src="form.js"></script>
+</body>
+</html>

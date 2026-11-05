@@ -1,0 +1,159 @@
+:root {
+    --width: min(100vw, 420px);
+}
+
+body {
+    font-family: system-ui;
+    margin: auto;
+    width: var(--width);
+    padding-bottom: 90vh;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 8px 4px;
+    border: none;
+    border-radius: 6px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: large;
+}
+
+.image {
+    height: calc(var(--width) / 9 * 16);
+    font-size: calc(var(--width) * 0.025);
+    position: relative;
+}
+
+.bars {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bar-container {
+    display: flex;
+    align-items: center;
+}
+
+.cpd {
+    flex: 0 0 calc(var(--width) * 0.12);
+    text-align: right;
+    margin-right: calc(var(--width) * 0.01);
+}
+
+.bar-and-desc {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0
+}
+
+.bar {
+    height: calc(var(--width) * .035);
+    border-radius: 0 calc(var(--width) * 0.007) calc(var(--width) * 0.007) 0;
+}
+
+.desc {
+    margin-left: calc(var(--width) * .01);
+}
+
+.ring-chart {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--width) * 0.03);
+}
+
+#ring {
+    width: calc(var(--width) * 0.3);
+}
+
+.center {
+    text-align: center;
+}
+
+.large {
+    font-size: calc(var(--width) * 0.035)
+}
+
+.vlarge {
+    font-size: calc(var(--width) * 0.06);
+}
+
+.legend {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* height: calc(var(--width) * 0.25); */
+    /* flex-wrap: wrap; */
+    /* width: calc(var(--width) * 0.4); */
+    gap: calc(var(--width) * 0.02);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: calc(var(--width) * 0.03);
+}
+
+.legend-row {
+    display: flex;
+    align-items: top;
+    gap: calc(var(--width) * 0.01);
+}
+
+.swatch {
+    width: calc(var(--width) * 0.03);
+    height: calc(var(--width) * 0.03);
+    border-radius: 3px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--width) * 0.005);
+}
+
+.legend-row>.col>div:nth-child(2) {
+    color: #0007;
+    font-style: italic;
+}
+
+.item-row {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 4px;
+    gap: 10px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+form label {
+    display: block;
+    margin: 10px 0
+}
+
+input,
+select {
+    padding: 6px;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box
+}
+
+.periods {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.periods label {
+    display: flex;
+}
